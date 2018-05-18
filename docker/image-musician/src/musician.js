@@ -23,6 +23,7 @@ function Musician(i) {
     this.activeSince = new Date();
 
     Musician.prototype.update = function() {
+		console.log('Updating musician...');
 
         var toJson = {
             'uuid' : this.uuid,

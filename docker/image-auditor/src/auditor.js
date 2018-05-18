@@ -14,14 +14,9 @@ var dgram = require('dgram');
 
 var net = require('net');
 
-
-/*
- * Let's create a datagram socket. We will use it to listen for datagrams published in the
- * multicast group by musicians and containing sounds
- */
 var socket = dgram.createSocket('udp4');
 socket.bind(4242, function() {
-    console.log("An auditor has joined the concerto !");
+    console.log("An auditor joined the concerto !");
     socket.addMembership("239.255.22.5");
 });
 		
